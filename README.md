@@ -2,7 +2,7 @@
 
 Ce repo contient notre participation au [IA Data Hack](https://www.defense.gouv.fr/sga/evenements/hackathon-ia-data-hack), pour le projet acoustique.
 
-Le but de ce projet étant de trouver la positions d'humains dans une pièce à l'aide de données sonores.
+Le but de ce projet étant la localisation de personnes à partir d'audios RIRs.
 
 Les membres de ce projet sont:
 - Alice CARIOU

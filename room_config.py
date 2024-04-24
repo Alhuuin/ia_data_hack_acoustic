@@ -87,3 +87,5 @@ class Dataset(object):
                 ):
         self.room_setup = room_setup
         self.preprocess_dir = preprocess_dir
+
+PSEUDO_SAMPLE_RATE = 16000
