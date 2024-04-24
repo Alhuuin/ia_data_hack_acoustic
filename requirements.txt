@@ -5,3 +5,5 @@ tensorflow
 scikit-learn
 torch
 dataset
+resampy
+soundfile
