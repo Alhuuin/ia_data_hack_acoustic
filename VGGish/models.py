@@ -3,21 +3,11 @@ import sys
 import numpy as np
 import config
 import torch
-#sys.path.insert(0, "external/torchvggish/torchvggish")
+
 import mel_features
 import vggish_input
 import vggish_params
 import vggish_file
-#import VGG, VGGish, make_layers
-#import waveform_to_examples
-#import torchvggish.mel_features
-#import torchvggish.vggish_params
-
-
-
-#import config
-#sys.path.insert(0, str(config.LIBS_DIR.joinpath('resnet1d')))
-#from resnet1d import ResNet1D
 
 
 #Wavelet stuff
@@ -209,7 +199,7 @@ class CustomVGGish2(vggish_file.VGG):
 
     def forward(self, x):
         x = self._preprocess(x)
-        x = VGG.forward(self, x)
+        x = vggish_file.VGG.forward(self, x)
         x = self.mlp(x)
         return x
 
@@ -223,15 +213,15 @@ class CustomVGGish2(vggish_file.VGG):
             reshape = True
 
         # Compute log mel spectrogram features.
-        x = torchvggish.mel_features.log_mel_spectrogram(
+        x = mel_features.log_mel_spectrogram(
             x,
-            audio_sample_rate=torchvggish.vggish_params.SAMPLE_RATE,
-            log_offset=torchvggish.vggish_params.LOG_OFFSET,
-            window_length_secs=torchvggish.vggish_params.STFT_WINDOW_LENGTH_SECONDS,
-            hop_length_secs=torchvggish.vggish_params.STFT_HOP_LENGTH_SECONDS,
-            num_mel_bins=torchvggish.vggish_params.NUM_MEL_BINS,
-            lower_edge_hertz=torchvggish.vggish_params.MEL_MIN_HZ,
-            upper_edge_hertz=torchvggish.vggish_params.MEL_MAX_HZ)
+            audio_sample_rate=vggish_params.SAMPLE_RATE,
+            log_offset=vggish_params.LOG_OFFSET,
+            window_length_secs=vggish_params.STFT_WINDOW_LENGTH_SECONDS,
+            hop_length_secs=vggish_params.STFT_HOP_LENGTH_SECONDS,
+            num_mel_bins=vggish_params.NUM_MEL_BINS,
+            lower_edge_hertz=vggish_params.MEL_MIN_HZ,
+            upper_edge_hertz=vggish_params.MEL_MAX_HZ)
             
         if reshape:
             #print("orig siez")

@@ -2,3 +2,7 @@ data/
 models/
 *__pycache__*
 *.swp
+VGGish/errors/
+VGGish/model.pt
+dataset/predict.pt
+err/

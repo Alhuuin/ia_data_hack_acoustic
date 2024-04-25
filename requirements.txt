@@ -10,3 +10,4 @@ soundfile
 cupy-cuda12x
 tf_slim
 six
+torch-summary
