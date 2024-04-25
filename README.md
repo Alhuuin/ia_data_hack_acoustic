@@ -14,8 +14,9 @@ Les membres de ce projet sont:
 ## Architecture du projet
 
 Vous pouvez trouver :
-- `datasets/` : le dataset sera stocké ici une fois téléchargé
-- `indices/` : fichiers utiles
+- `data/` : le dataset sera stocké ici une fois téléchargé
+- `dataset/` : fichiers utiles à l'utilisation du dataset
+- `indices/` : fichiers utiles à l'utilisation des données
 - `research/` : méthodes étudiées avant de choisir la plus adaptée
 - `models` : contient les fichiers liés à VGGish
 - `acoustic_multichannel.ipynb` : méthode utilisée pour répondre à la problématique du projet

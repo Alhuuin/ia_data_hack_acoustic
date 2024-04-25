@@ -1,9 +1,0 @@
-numpy
-resampy
-tensorflow
-tf_slim
-six
-soundfile
-matplotlib
-scikit-learn
-cupy-cuda12x
